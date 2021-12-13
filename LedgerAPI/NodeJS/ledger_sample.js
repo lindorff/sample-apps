@@ -5,7 +5,8 @@ const fs = require('fs');
 var oauth2 = new ClientOAuth2({
     clientId: '<your_clientId_here>',
     clientSecret: '<your_clientSecret_here>',
-    accessTokenUri: 'https://idp.lowell.io/auth/realms/test-clients/protocol/openid-connect/token'
+    accessTokenUri: 'https://idp.lowell.io/auth/realms/test-clients/protocol/openid-connect/token',
+    scopes: ['openid']
 });
 
 oauth2.credentials.getToken()
